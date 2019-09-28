@@ -1,5 +1,8 @@
 version: "3"
 
+volumes:
+  minecraft:
+
 services:
   foolcraft:
     build: .
@@ -8,4 +11,4 @@ services:
     ports:
       - 25565:25565
     volumes:
-      - ./mc:/minecraft
+      - minecraft:/minecraft
