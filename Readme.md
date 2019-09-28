@@ -9,7 +9,8 @@ https://cloud.docker.com/repository/docker/obyoxar/foolcraft-server/general
 ```
 
 and a docker-compose.yml like this
-```
+
+```yaml
 version: "3"
 
 volumes:
@@ -17,7 +18,8 @@ volumes:
 
 services:
   foolcraft:
-    image: obyoxar/foolcraft-server:latest
+    build: .
+    # image: obyoxar/foolcraft-server:latest
     environment:
       - USER_ID=1010
     ports:
